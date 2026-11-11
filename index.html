@@ -5,233 +5,449 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#075c60">
-<title>الحرمين | مكتب الحرمين للملابس بالجملة</title>
-<meta name="description" content="مكتب الحرمين للملابس بالجملة والقطاعي. متخصصون في الترينجات الرجالي والملابس المتنوعة بجودة مميزة وأسعار منافسة.">
+<meta name="description" content="مكتب الحرمين للملابس جملة وقطاعي، متخصص في الترينجات الرجالي والملابس المتنوعة.">
+<title>مكتب الحرمين | للملابس جملة وقطاعي</title>
+
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+
 :root{
---teal:#075c60;
---deep:#06464a;
---orange:#ed8a0b;
---cream:#f8f7f3;
---dark:#172d2e;
+--teal:#08747a;
+--dark:#06464a;
+--orange:#ed890b;
+--cream:#f8f7f2;
+--ink:#183638;
 }
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{
-font-family:Tahoma,Arial,sans-serif;
+font-family:'Cairo',Tahoma,Arial,sans-serif;
 background:var(--cream);
-color:var(--dark);
-line-height:1.8;
+color:var(--ink);
+line-height:1.8
 }
 a{text-decoration:none;color:inherit}
+.container{width:90%;max-width:1150px;margin:auto}
+
+/* HEADER */
 header{
-background:white;
-padding:12px 5%;
+background:#fff;
+position:sticky;
+top:0;
+z-index:50;
+box-shadow:0 3px 20px #0000000b;
+}
+.nav{
+min-height:88px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:15px;
-box-shadow:0 3px 18px #0000000c;
-position:sticky;top:0;z-index:10;
+gap:15px
 }
-.logo{width:110px;height:85px;object-fit:contain}
-nav{display:flex;gap:22px;font-size:14px;font-weight:bold}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:82px;height:78px;object-fit:contain}
+.brand-text{font-weight:900;color:var(--teal);font-size:20px}
+.brand-text small{
+display:block;
+font-size:10px;
+color:var(--orange);
+letter-spacing:1px
+}
+nav{display:flex;gap:22px;font-size:13px;font-weight:bold}
 nav a:hover{color:var(--orange)}
-.contact{
-background:var(--orange);color:white;
-padding:11px 18px;border-radius:9px;font-weight:bold;
+.menu{
+display:none;
+background:none;
+border:0;
+font-size:27px;
+color:var(--teal)
 }
+
+/* HERO */
 .hero{
-background:linear-gradient(125deg,#06464a,#087276);
-color:white;text-align:center;
-padding:75px 20px 85px;
-position:relative;overflow:hidden;
+background:linear-gradient(125deg,#06464a,#08787c);
+color:white;
+padding:85px 0;
+position:relative;
+overflow:hidden
 }
-.hero:after{
-content:"";position:absolute;
-width:280px;height:280px;border:35px solid #ffffff12;
-border-radius:50%;top:-140px;left:-90px;
+.hero:before{
+content:"";
+position:absolute;
+width:390px;height:390px;
+border:1px solid #ffffff20;
+border-radius:50%;
+left:-120px;top:-140px
 }
-.hero .tag{
-display:inline-block;border:1px solid #ffffff66;
-border-radius:30px;padding:6px 18px;
-font-size:13px;margin-bottom:20px;
+.hero-content{position:relative;z-index:2;max-width:760px}
+.eyebrow{
+color:#ffc16b;
+font-size:13px;
+font-weight:800;
+letter-spacing:2px
 }
-.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.5;margin-bottom:15px}
+.hero h1{
+font-size:clamp(34px,6vw,62px);
+line-height:1.45;
+margin:15px 0
+}
 .hero h1 span{color:#ffb342}
-.hero p{font-size:17px;color:#e4eeee;max-width:650px;margin:auto}
-.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{
-padding:13px 24px;border-radius:9px;
-font-weight:bold;display:inline-block;
+.hero p{
+font-size:17px;
+color:#e3eeee;
+max-width:620px
 }
-.btn-orange{background:var(--orange);color:white}
-.btn-outline{border:1px solid #ffffff80;color:white}
-section{padding:65px 6%}
-.section-title{text-align:center;margin-bottom:35px}
-.section-title small{color:var(--orange);font-weight:bold}
-.section-title h2{font-size:29px;color:var(--teal);margin-top:5px}
-.section-title p{color:#777;margin-top:7px;font-size:14px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{
+display:inline-block;
+padding:13px 24px;
+border-radius:8px;
+font-weight:800;
+transition:.2s
+}
+.btn:hover{transform:translateY(-3px)}
+.gold{background:var(--orange);color:white}
+.outline{border:1px solid #ffffff90;color:white}
+
+/* SECTION */
+section{padding:65px 0}
+.heading{text-align:center;margin-bottom:32px}
+.heading small{color:var(--orange);font-weight:900}
+.heading h2{font-size:30px;color:var(--teal);margin:6px 0}
+.heading p{color:#777;font-size:14px}
+
+/* CATEGORIES */
 .categories{
-display:grid;grid-template-columns:repeat(3,1fr);
-gap:20px;max-width:1100px;margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:17px
 }
 .category{
-background:white;border-radius:17px;padding:30px 20px;
-text-align:center;border:1px solid #eee;
-transition:.25s;
+background:#fff;
+border:1px solid #e9e9e3;
+border-radius:15px;
+padding:28px 20px;
+text-align:center;
+transition:.25s
 }
-.category:hover{transform:translateY(-5px);box-shadow:0 12px 30px #0000000d}
-.category .symbol{
-width:65px;height:65px;border-radius:18px;
-background:#eaf3f0;color:var(--teal);
-display:grid;place-items:center;margin:0 auto 15px;
-font-size:30px;
+.category:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 28px #0000000d
 }
-.category h3{color:var(--teal);font-size:19px}
-.category p{font-size:13px;color:#888;margin-top:7px}
-.about{
-background:white;
-display:grid;grid-template-columns:1fr 1fr;
-gap:40px;align-items:center;
+.icon{
+width:66px;height:66px;
+display:grid;place-items:center;
+margin:0 auto 12px;
+border-radius:18px;
+background:#eaf3ef;
+font-size:31px
 }
-.about h2{color:var(--teal);font-size:30px;margin-bottom:15px}
-.about p{color:#666;margin-bottom:15px}
-.about-mark{
-background:linear-gradient(135deg,#075c60,#0c7779);
-color:white;border-radius:20px;padding:40px;text-align:center;
+.category h3{color:var(--teal);font-size:18px}
+.category p{font-size:13px;color:#888;margin-top:5px}
+
+/* ADVANTAGES */
+.advantages{background:#fff}
+.adv-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:17px
 }
-.about-mark strong{font-size:34px;color:#ffb342;display:block}
-.features{
-display:grid;grid-template-columns:repeat(3,1fr);
-gap:15px;margin-top:25px;
+.adv{
+padding:24px 15px;
+border:1px solid #e9ece7;
+border-radius:12px;
+text-align:center
 }
-.feature{
-background:var(--cream);padding:18px;border-radius:12px;
-text-align:center;font-size:14px;font-weight:bold;color:var(--teal);
+.adv b{color:var(--teal);font-size:18px}
+.adv p{font-size:13px;color:#777;margin-top:6px}
+
+/* ABOUT */
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+align-items:center
 }
-.contact-section{text-align:center;background:#edf2ef}
-.contact-section h2{font-size:28px;color:var(--teal)}
-.contact-section p{color:#666;margin:10px 0 25px}
+.about h2{font-size:31px;color:var(--teal);margin-bottom:12px}
+.about p{color:#687776}
+.about-box{
+background:linear-gradient(135deg,#07575b,#08777b);
+color:white;
+border-radius:18px;
+padding:40px;
+text-align:center
+}
+.about-box strong{font-size:35px;color:#ffb342}
+.about-box p{color:#e4eeee;margin-top:10px}
+
+/* SOCIAL */
+.social-section{
+background:#fff;
+text-align:center
+}
+.social-links{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:13px
+}
+.social{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+padding:17px 10px;
+border-radius:12px;
+color:white;
+font-weight:800;
+transition:.2s
+}
+.social:hover{transform:translateY(-4px)}
+.social span{font-size:23px;font-weight:900}
+.whatsapp{background:#168c53}
+.telegram{background:#229ed9}
+.facebook{background:#1877f2}
+.tiktok{background:#171717}
+
+/* CONTACT */
+.contact{
+background:#edf3ef;
+text-align:center
+}
+.contact h2{color:var(--teal);font-size:29px}
+.contact p{color:#777;margin:8px 0 20px}
+.phone{
+font-size:27px;
+font-weight:900;
+color:var(--orange);
+direction:ltr;
+display:block;
+margin:12px
+}
+
+/* FOOTER */
 footer{
-background:#073f42;color:white;text-align:center;
-padding:30px 15px;font-size:13px;
+background:#073f42;
+color:#dce8e4;
+padding:28px 15px;
+text-align:center;
+font-size:13px
 }
-footer span{color:#ffb342}
-@media(max-width:700px){
-header{flex-wrap:wrap;justify-content:center}
-.logo{width:95px;height:72px}
-nav{order:3;width:100%;justify-content:center;gap:17px;font-size:12px}
-.contact{font-size:13px;padding:9px 13px}
-.hero{padding:60px 18px}
+footer img{
+width:90px;height:85px;
+object-fit:contain;
+background:white;
+border-radius:10px;
+margin-bottom:10px
+}
+footer strong{color:#ffb342;font-size:19px}
+
+@media(max-width:760px){
+.nav{min-height:75px}
+.brand img{width:65px;height:65px}
+.brand-text{font-size:17px}
+.menu{display:block}
+nav{
+display:none;
+position:absolute;
+top:75px;
+right:0;left:0;
+background:#fff;
+padding:20px;
+flex-direction:column;
+gap:15px;
+box-shadow:0 10px 20px #00000012
+}
+nav.show{display:flex}
+.hero{padding:65px 0}
 .hero p{font-size:15px}
-section{padding:48px 5%}
-.categories{grid-template-columns:repeat(2,1fr);gap:12px}
-.category{padding:23px 10px}
+section{padding:48px 0}
+.categories{grid-template-columns:repeat(2,1fr);gap:11px}
+.category{padding:20px 10px}
 .category h3{font-size:16px}
-.about{grid-template-columns:1fr;gap:25px}
-.about-mark{padding:30px}
-.features{grid-template-columns:1fr}
-.section-title h2{font-size:25px}
+.adv-grid{grid-template-columns:1fr}
+.about-grid{grid-template-columns:1fr}
+.social-links{grid-template-columns:repeat(2,1fr)}
+.heading h2{font-size:25px}
+}
+@media(max-width:360px){
+.categories{grid-template-columns:1fr}
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<img class="logo" src="IMG_1906.jpeg" alt="شعار مكتب الحرمين">
-<nav>
-<a href="#home">الرئيسية</a>
+<div class="container nav">
+<a href="#" class="brand">
+<img src="IMG_1906.jpeg" alt="شعار الحرمين">
+<span class="brand-text">
+مكتب الحرمين
+<small>AL HARAMAIN CLOTHING</small>
+</span>
+</a>
+
+<button class="menu" onclick="document.getElementById('nav').classList.toggle('show')">☰</button>
+
+<nav id="nav">
+<a href="#">الرئيسية</a>
 <a href="#categories">الأقسام</a>
-<a href="#about">من نحن</a>
-<a href="#contact">اتصل بنا</a>
+<a href="#about">عن المكتب</a>
+<a href="#social">حساباتنا</a>
+<a href="#contact">تواصل معنا</a>
 </nav>
-<a class="contact" href="https://wa.me/201128441332">تواصل معنا</a>
+</div>
 </header>
 
 <main>
-<div class="hero" id="home">
-<div class="tag">الحرمين للملابس بالجملة</div>
-<h1>اختيارك المميز<br><span>للملابس والترينجات</span></h1>
-<p>وجهتك للملابس المتنوعة والترينجات الرجالي، بجودة نهتم بها وأسعار تنافسية تناسب احتياجاتك.</p>
-<div class="hero-actions">
-<a class="btn btn-orange" href="https://wa.me/201128441332">تواصل عبر واتساب</a>
-<a class="btn btn-outline" href="#categories">اكتشف أقسامنا</a>
+
+<div class="hero">
+<div class="container hero-content">
+<div class="eyebrow">AL HARAMAIN CLOTHING</div>
+<h1>الحرمين للملابس<br><span>أناقة وتنوع وثقة</span></h1>
+<p>
+وجهتك للملابس المتنوعة والترينجات الرجالي.
+تشكيلات مختلفة وبيع جملة وقطاعي لتلبية احتياجاتك.
+</p>
+<div class="actions">
+<a class="btn gold" href="https://wa.me/message/WWYK3GKRTL66L1">تواصل عبر واتساب</a>
+<a class="btn outline" href="#categories">اكتشف أقسامنا</a>
+</div>
 </div>
 </div>
 
 <section id="categories">
-<div class="section-title">
-<small>اكتشف عالم الحرمين</small>
-<h2>أقسام الملابس</h2>
-<p>تنوع في الاختيارات لتجد ما تبحث عنه</p>
+<div class="container">
+<div class="heading">
+<small>AL HARAMAIN COLLECTION</small>
+<h2>اكتشف أقسام الحرمين</h2>
+<p>تشكيلات متنوعة تناسب مختلف الاحتياجات</p>
 </div>
+
 <div class="categories">
 <div class="category">
-<div class="symbol">👔</div>
+<div class="icon">👔</div>
 <h3>ترينجات رجالي</h3>
-<p>تشكيلات متنوعة للترينجات الرجالي</p>
+<p>تشكيلات متنوعة للرجال</p>
 </div>
+
 <div class="category">
-<div class="symbol">👕</div>
+<div class="icon">👕</div>
 <h3>ملابس رجالي</h3>
-<p>اختيارات متنوعة للملابس الرجالي</p>
+<p>اختيارات متنوعة وأنيقة</p>
 </div>
+
 <div class="category">
-<div class="symbol">🧥</div>
+<div class="icon">🧥</div>
 <h3>ملابس شتوية</h3>
-<p>قطع متنوعة تناسب مختلف الأذواق</p>
+<p>قطع تناسب مختلف الأذواق</p>
 </div>
+
 <div class="category">
-<div class="symbol">👦</div>
-<h3>ملابس أطفال</h3>
-<p>ملابس متنوعة للأولاد والأطفال</p>
+<div class="icon">👗</div>
+<h3>ملابس حريمي</h3>
+<p>تشكيلات متنوعة</p>
 </div>
+
 <div class="category">
-<div class="symbol">🏠</div>
+<div class="icon">🏠</div>
 <h3>ملابس منزلية</h3>
-<p>اختيارات عملية ومريحة</p>
+<p>راحة وأناقة للاستخدام اليومي</p>
 </div>
+
 <div class="category">
-<div class="symbol">🛍️</div>
+<div class="icon">🛍️</div>
 <h3>جملة وقطاعي</h3>
-<p>خدمة تناسب التجار والعملاء</p>
+<p>تواصل لمعرفة الأسعار والطلبات</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="advantages">
+<div class="container">
+<div class="heading">
+<small>WHY AL HARAMAIN</small>
+<h2>لماذا الحرمين؟</h2>
+</div>
+<div class="adv-grid">
+<div class="adv"><b>تنوع المنتجات</b><p>اختيارات متعددة من الملابس</p></div>
+<div class="adv"><b>ترينجات رجالي</b><p>تخصص واهتمام بالتفاصيل</p></div>
+<div class="adv"><b>جملة وقطاعي</b><p>خدمة للتجار والعملاء</p></div>
 </div>
 </div>
 </section>
 
 <section class="about" id="about">
+<div class="container about-grid">
 <div>
-<small style="color:#ed8a0b;font-weight:bold">تعرف علينا</small>
-<h2>الحرمين للملابس</h2>
-<p>مكتب الحرمين متخصص في تجارة الملابس بالجملة والقطاعي، مع اهتمام خاص بالترينجات الرجالي والملابس المتنوعة.</p>
-<p>هدفنا توفير اختيارات متنوعة تجمع بين الجودة والسعر المناسب، وبناء علاقات ثقة طويلة مع عملائنا.</p>
-<div class="features">
-<div class="feature">✓ تنوع المنتجات</div>
-<div class="feature">✓ أسعار تنافسية</div>
-<div class="feature">✓ جملة وقطاعي</div>
+<div class="eyebrow">ABOUT AL HARAMAIN</div>
+<h2>مكتب الحرمين للملابس</h2>
+<p>
+متخصصون في الملابس المتنوعة والترينجات الرجالي،
+ونحرص على تقديم اختيارات متعددة تجمع بين الجودة والتنوع والقيمة.
+</p>
 </div>
-</div>
-<div class="about-mark">
+<div class="about-box">
 <strong>الحرمين</strong>
-<h3>ثقة في الاختيار</h3>
-<p>الملابس بالجملة والقطاعي</p>
+<h3>اختيارك بثقة</h3>
+<p>للملابس جملة وقطاعي</p>
+</div>
 </div>
 </section>
 
-<section class="contact-section" id="contact">
-<h2>يسعدنا تواصلك معنا</h2>
-<p>للاستفسار عن المنتجات والأسعار والتعامل التجاري</p>
-<a class="btn btn-orange" href="https://wa.me/201128441332">تواصل معنا على واتساب</a>
-<p style="margin-top:20px;font-weight:bold;color:#075c60;direction:ltr">
-01128441332
-</p>
+<section class="social-section" id="social">
+<div class="container">
+<div class="heading">
+<small>FOLLOW US</small>
+<h2>تابع الحرمين على منصاتنا</h2>
+<p>تابع أحدث المنتجات والتشكيلات والعروض</p>
+</div>
+
+<div class="social-links">
+<a class="social whatsapp" href="https://wa.me/message/WWYK3GKRTL66L1" target="_blank">
+<span>◉</span> واتساب
+</a>
+
+<a class="social telegram" href="https://t.me/+jMdrRhoEv6c0YzE0" target="_blank">
+<span>➤</span> تيليجرام
+</a>
+
+<a class="social facebook" href="https://www.facebook.com/Marwanalkurdose?mibextid=wwXIfr" target="_blank">
+<span>f</span> فيسبوك
+</a>
+
+<a class="social tiktok" href="https://www.tiktok.com/@marwan302" target="_blank">
+<span>♪</span> تيك توك
+</a>
+</div>
+</div>
 </section>
+
+<section class="contact" id="contact">
+<div class="container">
+<h2>يسعدنا تواصلك معنا</h2>
+<p>للطلبات والاستفسارات والتعامل بالجملة والقطاعي</p>
+<a class="btn gold" href="https://wa.me/message/WWYK3GKRTL66L1">ابدأ محادثة واتساب</a>
+<a class="phone" href="tel:01128441332">01128441332</a>
+</div>
+</section>
+
 </main>
 
 <footer>
-<p>© 2026 <span>الحرمين للملابس</span> - جميع الحقوق محفوظة</p>
-<p>جودة نعتز بها وثقة نحرص عليها</p>
+<img src="IMG_1906.jpeg" alt="شعار مكتب الحرمين">
+<strong>مكتب الحرمين للملابس</strong>
+<p>جملة وقطاعي • جميع الحقوق محفوظة © 2026</p>
 </footer>
+
+<script>
+document.querySelectorAll('#nav a').forEach(a=>{
+a.addEventListener('click',()=>{
+document.getElementById('nav').classList.remove('show');
+});
+});
+</script>
 
 </body>
 </html>
