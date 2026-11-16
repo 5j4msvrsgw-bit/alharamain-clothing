@@ -3,145 +3,150 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الحرمين | للأزياء والملابس</title>
-<meta name="description" content="الحرمين للملابس - جملة وقطاعي. تصفح الأقسام والموديلات وتواصل معنا عبر تليجرام.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الحرمين للملابس | جملة وقطاعي</title>
+<meta name="description" content="الحرمين للملابس - اختار القسم وتصفح أحدث الموديلات والعروض على تليجرام.">
+
 <style>
 *{box-sizing:border-box}
 body{
  margin:0;
  font-family:Tahoma,Arial,sans-serif;
- background:#f6f8f8;
+ background:#f5f8f7;
  color:#183b3b;
 }
-a{text-decoration:none;color:inherit}
+a{text-decoration:none}
 header{
  background:#fff;
- padding:15px 20px;
- display:flex;
- align-items:center;
- justify-content:center;
- box-shadow:0 2px 12px #0000000c;
+ text-align:center;
+ padding:15px;
+ box-shadow:0 3px 15px #0000000b;
 }
 .logo{
- width:100px;height:100px;
+ width:115px;
+ height:115px;
  object-fit:contain;
 }
 .hero{
  text-align:center;
- padding:35px 20px 25px;
-}
-.hero h1{
- font-size:30px;
- margin:8px 0;
- color:#087d79;
-}
-.hero p{
- color:#667575;
- line-height:1.9;
- font-size:15px;
- margin:8px auto;
+ padding:30px 18px 22px;
 }
 .tag{
  display:inline-block;
- background:#e2f3ef;
+ background:#e3f3ef;
  color:#087d79;
  padding:8px 18px;
  border-radius:30px;
  font-size:13px;
 }
-.container{
- max-width:850px;
- margin:auto;
- padding:10px 18px 35px;
+h1{
+ color:#087d79;
+ font-size:29px;
+ margin:15px 0 8px;
 }
-.section-title{
+.hero p{
+ color:#718080;
+ line-height:1.9;
+ font-size:14px;
+ margin:0;
+}
+.container{
+ width:100%;
+ max-width:650px;
+ padding:10px 18px 30px;
+ margin:auto;
+}
+.title{
  text-align:center;
- font-size:21px;
- margin:15px 0 20px;
+ font-size:20px;
+ margin:10px 0 20px;
 }
 .sections{
- display:grid;
- grid-template-columns:repeat(2,1fr);
- gap:14px;
+ display:flex;
+ flex-direction:column;
+ gap:15px;
 }
 .section{
  background:#fff;
  border:1px solid #e5eeee;
- border-radius:16px;
- padding:23px 12px;
- text-align:center;
+ border-radius:18px;
+ padding:19px;
+ display:flex;
+ align-items:center;
+ gap:16px;
+ box-shadow:0 5px 18px #00000007;
  transition:.2s;
- box-shadow:0 4px 15px #00000006;
 }
-.section:active{transform:scale(.97)}
+.section:active{transform:scale(.98)}
 .symbol{
- font-size:34px;
- margin-bottom:12px;
+ width:62px;
+ height:62px;
+ flex-shrink:0;
+ border-radius:16px;
+ background:#e8f5f1;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ font-size:31px;
 }
-.section h3{
- margin:0 0 8px;
- font-size:18px;
+.info{flex:1}
+.info h2{
+ font-size:19px;
  color:#087d79;
+ margin:0 0 7px;
 }
-.section p{
- margin:0;
- color:#849191;
+.info p{
+ color:#829090;
  font-size:12px;
+ margin:0;
 }
 .arrow{
- display:inline-block;
- margin-top:13px;
  color:#e77c36;
- font-size:13px;
- font-weight:bold;
+ font-size:22px;
 }
 .contact{
+ margin-top:25px;
+ padding:22px 15px;
+ border-radius:18px;
  background:#087d79;
  color:white;
- border-radius:18px;
  text-align:center;
- padding:25px 15px;
- margin-top:25px;
 }
-.contact h2{margin:0 0 10px;font-size:21px}
-.contact p{font-size:14px;line-height:1.8}
-.main-button{
+.contact h2{margin:0 0 9px;font-size:20px}
+.contact p{font-size:13px;line-height:1.8}
+.whatsapp{
  display:inline-block;
  background:#fff;
  color:#087d79;
- padding:13px 28px;
+ padding:12px 25px;
  border-radius:30px;
  font-weight:bold;
- margin-top:8px;
+ margin-top:5px;
 }
 .social{
  display:flex;
  justify-content:center;
- flex-wrap:wrap;
  gap:10px;
- margin:22px 0;
+ flex-wrap:wrap;
+ margin:20px 0;
 }
 .social a{
  background:#fff;
- border:1px solid #e4eeee;
- padding:11px 16px;
+ border:1px solid #e5eeee;
  border-radius:25px;
+ padding:10px 16px;
+ color:#087d79;
  font-size:13px;
 }
 footer{
  text-align:center;
- padding:20px;
- color:#879292;
+ color:#899595;
  font-size:12px;
-}
-@media(max-width:380px){
- .hero h1{font-size:25px}
- .section{padding:20px 8px}
- .section h3{font-size:16px}
+ padding:5px 15px 22px;
 }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -152,57 +157,50 @@ footer{
  <span class="tag">جملة وقطاعي</span>
  <h1>الحرمين للملابس</h1>
  <p>
- أهلاً بيكم في الحرمين<br>
- اختار القسم وشاهد أحدث الموديلات والأسعار مباشرة على تليجرام.
+ أهلاً وسهلاً بيكم ❤️<br>
+ اختار القسم المناسب ليك وتصفح أحدث الموديلات والعروض.
  </p>
 </section>
 
 <main class="container">
- <h2 class="section-title">تصفح الأقسام</h2>
+
+ <h2 class="title">اختار القسم</h2>
 
  <div class="sections">
 
-  <a class="section" href="https://t.me/+jMdrRhoEv6c0YzE0" target="_blank">
-   <div class="symbol">👔</div>
-   <h3>ملابس رجالي</h3>
-   <p>شاهد الموديلات والأسعار</p>
-   <span class="arrow">تصفح القسم ←</span>
-  </a>
-
-  <a class="section" href="https://t.me/+jMdrRhoEv6c0YzE0" target="_blank">
+  <a class="section" href="https://t.me/+jMdrRhoEv6c0YzE0" target="_blank" rel="noopener">
    <div class="symbol">👗</div>
-   <h3>ملابس حريمي</h3>
-   <p>شاهد الموديلات والأسعار</p>
-   <span class="arrow">تصفح القسم ←</span>
+   <div class="info">
+    <h2>القسم الحريمي</h2>
+    <p>تصفحي أحدث الموديلات والتشكيلات</p>
+   </div>
+   <span class="arrow">←</span>
   </a>
 
-  <a class="section" href="https://t.me/+jMdrRhoEv6c0YzE0" target="_blank">
-   <div class="symbol">💗</div>
-   <h3>لانجيري وملابس داخلية</h3>
-   <p>شاهد الموديلات والأسعار</p>
-   <span class="arrow">تصفح القسم ←</span>
+  <a class="section" href="https://t.me/merokard" target="_blank" rel="noopener">
+   <div class="symbol">👕</div>
+   <div class="info">
+    <h2>القسم الرجالي والأطفالي</h2>
+    <p>شاهد أحدث الموديلات والأسعار</p>
+   </div>
+   <span class="arrow">←</span>
   </a>
 
-  <a class="section" href="https://t.me/+jMdrRhoEv6c0YzE0" target="_blank">
-   <div class="symbol">🏠</div>
-   <h3>ملابس منزلية</h3>
-   <p>شاهد الموديلات والأسعار</p>
-   <span class="arrow">تصفح القسم ←</span>
-  </a>
-
-  <a class="section" href="https://t.me/+jMdrRhoEv6c0YzE0" target="_blank">
-   <div class="symbol">🏃</div>
-   <h3>ترينجات رجالي</h3>
-   <p>شاهد الموديلات والأسعار</p>
-   <span class="arrow">تصفح القسم ←</span>
+  <a class="section" href="https://t.me/Gardellharmenseefy" target="_blank" rel="noopener">
+   <div class="symbol">🔥</div>
+   <div class="info">
+    <h2>التصفيات والعروض</h2>
+    <p>اكتشف العروض والتخفيضات المتاحة</p>
+   </div>
+   <span class="arrow">←</span>
   </a>
 
  </div>
 
  <section class="contact">
-  <h2>تواصل معنا</h2>
-  <p>للاستفسار عن الموديلات والأسعار والطلبات</p>
-  <a class="main-button" href="https://wa.me/201128441332" target="_blank">
+  <h2>يسعدنا تواصلك معانا</h2>
+  <p>للاستفسار والطلبات، تواصل معنا مباشرة</p>
+  <a class="whatsapp" href="https://wa.me/201128441332" target="_blank">
    تواصل عبر واتساب
   </a>
   <p>01128441332</p>
@@ -213,6 +211,7 @@ footer{
   <a href="https://www.facebook.com/Marwanalkurdose" target="_blank">فيسبوك</a>
   <a href="https://www.tiktok.com/@marwan302" target="_blank">تيك توك</a>
  </div>
+
 </main>
 
 <footer>
